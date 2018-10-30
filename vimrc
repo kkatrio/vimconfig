@@ -24,6 +24,8 @@ set number
 set showmatch
 " intelligent comments
 set comments=sl:/*,mb:\ *,elx:\ */
+" hightlight while typing
+set incsearch
 
 execute pathogen#infect()
 syntax on
