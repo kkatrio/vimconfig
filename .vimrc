@@ -28,5 +28,3 @@ set comments=sl:/*,mb:\ *,elx:\ */
 set incsearch
 
 execute pathogen#infect()
-syntax on
-filetype plugin indent on

@@ -1,4 +1,6 @@
-create symbolic link from submodules directory to a new directory in bundle
 ```
-ln -s /home/...submodules/plugin/ /bundle/plugin
+git submodule init
+git submodule update
+ln -s (pwd)/.vim $HOME/.vim
+ln -s (pwd)/.vimrc $HOME/.vimrc
 ```
