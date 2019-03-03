@@ -10,7 +10,7 @@ set encoding=utf-8
 set scrolloff=2
 set noshowmode
 set hidden
-set nowrap
+" set nowrap
 set nojoinspaces
 
 " tabs
@@ -86,6 +86,9 @@ inoremap <right> <nop>
 " Move by line
 nnoremap j gj
 nnoremap k gk
+
+" insert newline without insert mode
+nmap oo o<Esc>k
 
 " gui options
 set guioptions-=T " Remove toolbar
