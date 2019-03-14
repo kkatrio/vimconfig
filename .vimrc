@@ -95,7 +95,7 @@ set guioptions-=T " Remove toolbar
 set vb t_vb= " No more beeps
 set ruler
 set laststatus=2
-set relativenumber " Relative line numbers
+" set relativenumber " Relative line numbers
 set number " Also show current absolute line
 " set colorcolumn=80 " and give me a colored column
 set showcmd " Show (partial) command in status line.
@@ -111,8 +111,20 @@ Plug 'andymass/vim-matchup'
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'chriskempson/base16-vim'
 call plug#end()
 
 let g:fzf_layout = { 'down': '~20%' }
 nnoremap <silent> <leader>f :FZF<cr>
 
+" Colors
+if !has('gui_running')
+  set t_Co=256
+endif
+if (match($TERM, "-256color") != -1) && (match($TERM, "screen-256color") == -1)
+  " screen does not (yet) support truecolor
+  set termguicolors
+endif
+
+colorscheme base16-default-dark
+let base16colorspace=256
